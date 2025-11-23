@@ -1,7 +1,7 @@
 {
   "app": {
-    "bundleName": "com.sampleapp.WearEngineLiteWearableToAndroidFileMessageSender",
-    "vendor": "example",
+    "bundleName": "com.hmosdemos.WearEngineLiteWearableToAndroidFileMessageSender",
+    "vendor": "hmosdemos",
     "version": {
       "code": 1000000,
       "name": "1.0.0"
