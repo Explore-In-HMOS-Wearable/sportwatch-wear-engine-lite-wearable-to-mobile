@@ -1,6 +1,6 @@
 import {
     Builder, Message, P2pClient
-} from '../../wearengine/wearengine.js'; // After downloading the wear engine file for lite wearable from the place it, please check readme.
+} from '../wearenginesdk/wearengine'; // After downloading the wear engine file for lite wearable from the place it, please check readme.
 import app from '@system.app';
 import { PHONE_APP_FINGERPRINT, PHONE_APP_PACKAGE_NAME } from '../../constants/constants.js';
 import brightness from '@system.brightness';
@@ -32,13 +32,13 @@ export default {
             },
             onReceiveMessage: function (data) {
                 if (data && data.isFileType) {
-                    that.receiveMessage = 'Receive file name:' + data.name;
+                    that.receiveMessage = `Receive file name:${data.name}`;
                 } else {
-                    that.receiveMessage = 'Receive message:' + data;
+                    that.receiveMessage = `Receive message:${data.data}`;
                     that.receivedMessage = data;
                     console.info(`Received message: ${that.receivedMessage}`);
                 }
-            },
+            }
         });
     },
     unregisterMessage() {
@@ -46,7 +46,7 @@ export default {
         p2pClient.unregisterReceiver({
             onSuccess: function () {
                 that.infoMessage = 'Stop receiving messages is sent';
-            },
+            }
         });
     },
     sendMessage() {
@@ -69,7 +69,7 @@ export default {
             },
             onSendProgress: function (progressNum) {
                 console.info(`Send Progress: ${progressNum}`);
-            },
+            }
         });
     },
 
@@ -81,7 +81,7 @@ export default {
             },
             fail: function () {
                 console.info('screen on failed');
-            },
+            }
         })
         brightness.setValue({
             value: 180,
@@ -125,8 +125,8 @@ export default {
             },
             onSendProgress: function (count) {
                 console.info(`Progress: ${count}`);
-                that.infoMessage = 'Progress' + count;
-            },
+                that.infoMessage = `Progress: ${count}`
+            }
         });
     },
     ping() {
@@ -134,14 +134,14 @@ export default {
         that.infoMessage = 'Ping correct APP';
         p2pClient.ping({
             onSuccess: function () {
-                that.infoMessage = that.infoMessage + 'success';
+                that.infoMessage = `${that.infoMessage}success`;
             },
             onFailure: function () {
-                that.infoMessage = that.infoMessage + 'fail';
+                that.infoMessage = `${that.infoMessage}fail`;
             },
             onPingResult: function (resultCode) {
-                that.infoMessage = 'result code:' + resultCode.code + ', the app already have installed';
-            },
+                that.infoMessage = `result code${resultCode.code}, the app already have installed`;
+            }
         });
     },
     swipeEvent(e) {

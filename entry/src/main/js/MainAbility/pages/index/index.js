@@ -3,7 +3,7 @@ import router from '@system.router';
 
 export default {
     data: {
-        title: 'Splash Screen',
+        title: 'Splash Screen'
     },
 
     swipe: function (e) {

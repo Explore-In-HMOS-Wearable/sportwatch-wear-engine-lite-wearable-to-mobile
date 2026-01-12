@@ -7,10 +7,8 @@ It helps an Android phone talk to a Huawei Sport Watch (Lite Wearable).
 The app can send and receive messages and file between the phone and the watch.
 
 # Preview
-<div>
-    <img src="screenshots/preview_1.png" width="25%"/>
-    <img src="screenshots/preview_2.png" width="25%"/>
-</div>
+<img src="screenshots/preview_1.png" width="25%"/>
+<img src="screenshots/preview_2.png" width="25%"/>
 
 # Use Cases
 
