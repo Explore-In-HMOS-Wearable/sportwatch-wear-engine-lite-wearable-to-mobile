@@ -7,8 +7,10 @@ It helps an Android phone talk to a Huawei Sport Watch (Lite Wearable).
 The app can send and receive messages and file between the phone and the watch.
 
 # Preview
-<img src="screenshots/preview_1.png" width="25%"/>
-<img src="screenshots/preview_2.png" width="25%"/>
+<div>
+  <img src="screenshots/preview_1.png" width="25%"/>
+  <img src="screenshots/preview_2.png" width="25%"/>
+</div>
 
 # Use Cases
 
@@ -95,4 +97,5 @@ place it in  ```\entry\src\main\js\MainAbility\wearengine``` directory.
 
 # LICENSE
 [Mobile - Lite Wearable] WearEngine Message & File Send/Receiver is distributed under the terms of the MIT License.
+
 See the [license](/LICENSE) for more information.
