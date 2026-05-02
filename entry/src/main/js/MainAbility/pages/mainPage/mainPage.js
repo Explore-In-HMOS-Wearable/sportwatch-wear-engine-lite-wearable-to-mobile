@@ -12,7 +12,6 @@ let builderClient = new Builder();
 export default {
     data: {
         receiveMessage: '',
-        receivedMessage: '',
         infoMessage: ''
     },
     onInit() {
@@ -35,8 +34,8 @@ export default {
                     that.receiveMessage = `Receive file name:${data.name}`;
                 } else {
                     that.receiveMessage = `Receive message:${data.data}`;
-                    that.receivedMessage = data;
-                    console.info(`Received message: ${that.receivedMessage}`);
+                    that.receiveMessage = data;
+                    console.info(`Received message: ${that.receiveMessage}`);
                 }
             }
         });
